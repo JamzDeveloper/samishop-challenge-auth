@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "22f65b9e-3ae8-425b-86a0-6f4932751ef3",
+		"name": "samishop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26679067",
+		"_collection_link": "https://galactic-crater-842893.postman.co/workspace/team-projects~7413a6b8-fda4-4a63-bde2-e1aa36558acf/collection/26679067-22f65b9e-3ae8-425b-86a0-6f4932751ef3?action=share&source=collection_link&creator=26679067"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"password\":\"JuniorDeveloper\",\r\n    \"email\":\"junio@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzAzMzUyNzYxfQ.D0kT71WEvH48fsPzPlZTMVLdOFst2c2G9eA7d092QbQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"JuniorDeveloper\",\r\n    \"email\":\"junio@gmail.com\",\r\n    \"firstName\":\"junior\",\r\n    \"lastName\":\"arrango\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
